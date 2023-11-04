@@ -1,6 +1,9 @@
 import openpyxl
 import os
 
+#保存するファイル名を入力
+saved_file_name = "processed_data"#拡張子はいらない
+
 # Excelファイル名とシート名の取得
 cwd = os.getcwd()
 for file in os.listdir(cwd):
@@ -144,4 +147,4 @@ ser1.dLbls = DataLabelList(showVal=True)
 sheet.add_chart(graph_obj, "I5")
 
 #ファイルの保存
-wb.save('processed_Data.xlsx') #保存するファイル名を入れる
+wb.save(saved_file_name + '.xlsx') #保存するファイル名を入れる
